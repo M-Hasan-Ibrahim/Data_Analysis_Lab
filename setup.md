@@ -6,8 +6,8 @@ This guide walks you through setting up your Windows computer for working on Pyt
 2. Setting up Anaconda for virtual environments
 3. Installing Visual Studio Code (VS Code) as the Integrated Development Environment (IDE)
 4. Installing Git for version control
+5. Setup project by cloning the repository and creating a project specific virtual environment
 
----
 
 ## Prerequisites
 
@@ -15,7 +15,6 @@ This guide walks you through setting up your Windows computer for working on Pyt
   This guide uses commands for Windows OS. If you are using a different OS (e.g., macOS or Linux), follow the same steps with adjustments for your system. You can modify the commands for macOS or Linux using resources such as ChatGPT or by consulting platform-specific documentation.
 - **Stable Internet Connection**
 
----
 
 ## Step 1: Python Setup
 
@@ -55,7 +54,6 @@ pip --version
 
 This should display the installed Python and pip versions, confirming that Python has been successfully installed.
 
----
 
 ## Step 2: Annaconda Setup
 #### 1. **Download execution file:**
@@ -84,7 +82,6 @@ Run any conda command. For example:
 - `conda list` - Displays a list of packages installed in your active environment and their versions.
 - `anaconda-navigator` - Opens Anaconda Navigator.
 
----
 
 ## Step 3: VS Code Setup
 #### 1. **Download and install:**
@@ -99,7 +96,6 @@ Run any conda command. For example:
 - Install [python indent extension](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent)
 - Install [jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 
----
 
 ## Step 4: Git and Github Setup
 
@@ -112,6 +108,56 @@ Run any conda command. For example:
 For common commands in git: [git toturial](https://www.simplilearn.com/tutorials/git-tutorial)
 
 
+## Step 5: Project Setup
 
+After installing Git, Conda, and VS Code, you’re ready to start working on your actual project.
 
+#### 1. Clone the GitHub repository
 
+Open **Anaconda Prompt** or **Command Prompt**, then navigate to the folder where you want to store your project:
+
+```cmd
+cd path\to\your\projects
+```
+Clone the repository using the command:
+```bash
+git clone https://github.com/fatimahnasser99/LABCTE401-data-analysis.git
+```
+Then enter the cloned folder:
+```cmd
+cd LABCTE401-data-analysis
+```
+#### 2. Create a new conda environment
+
+Create a new Conda environment using Python (replace `env_name` with a name you prefer):
+
+```cmd
+conda create -n env_name python=3.10
+```
+Activate the environment:
+
+```cmd
+conda activate env_name
+```
+
+####  3. Install packages from requirements.txt
+
+If your project folder has a requirements.txt file, you can install all dependencies with:
+
+```cmd
+pip install -r requirements.txt
+```
+make sure you are in the project directory to identify the requirements file.
+
+#### 4. Open the project in VS Code
+Still inside the project folder, type:
+
+```cmd
+code .
+```
+This will open the current folder in VS Code.
+
+Make sure your new Conda environment is selected as the interpreter in VS Code:
+1. Press `Ctrl + Shift + P`
+2. Type “Python: Select Interpreter”
+3. Choose the interpreter that matches the environment you created.
