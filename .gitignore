@@ -3,7 +3,8 @@ processed_images/
 banana_dataset/
 processed_task7/
 dataLab6/
-
+dataLab6_heq/
+processed_images_heq/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
