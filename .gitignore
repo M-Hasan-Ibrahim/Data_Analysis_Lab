@@ -2,6 +2,7 @@
 processed_images/
 banana_dataset/
 processed_task7/
+dataLab6/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
