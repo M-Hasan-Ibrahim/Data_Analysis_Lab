@@ -1,3 +1,9 @@
 notebook
 pandas
 matplotlib
+numpy
+scikit-learn
+scipy
+opencv-python
+tensorflow
+ultralytics
